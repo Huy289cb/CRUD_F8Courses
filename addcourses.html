@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huy thêm khóa học F8</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./asset/css/base.css">
+    <link rel="stylesheet" href="./asset/css/hdft.css">
+    <link rel="stylesheet" href="./asset/css/addcourses.css">
+    <link rel="stylesheet" href="./asset/css/main.css">
+</head>
+<body>
+    <div class="app">
+        <header class="header"></header>
+        <div class="main_wrapper">
+            <div class="app_container module_wide">
+                <div class="main">
+                    <!-- Trigger/Open The Modal -->
+                    <button id="myBtn" class="btn btnUpdate">Thêm khóa học</button>
+
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="add_courses">
+                            <h2>Thêm Khóa học</h2>
+                            <div class="form_control">
+                                <label for="name">Tên khóa học</label>
+                                <input type="text" name="name" autocomplete="off">
+                            </div>
+                            <div class="form_control">
+                                <label for="description">Mô tả</label>
+                                <textarea name="description" id="" cols="30" rows="10"></textarea>
+                            </div>
+                            <div class="form_control">
+                                <label for="image">Hình ảnh</label>
+                                <input type="text" name="image">
+                            </div>
+                            <div class="form_control">
+                                <label for="author">Tác giả</label>
+                                <input type="text" name="author">
+                            </div>
+                            <div class="form_control">
+                                <label for="like">Like</label>
+                                <input type="text" name="like">
+                            </div>
+                            <div class="form_control form_control_btn">
+                                <button class="btn btnUpdate" id="addCourseBtn">Thêm</button>
+                                <button id="reset">Hủy</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    </div>
+                    
+                    <h2 class="preview_title">Preview</h2>
+                    <div id="previewCourses" class="module_row">
+                        <div class="module_col module_1-3">
+                            <div class="course_item">
+                                <div class="course_item__image_wrapper">
+                                    <a href="">
+                                        <div class="course_item__image" style="background-image: url(https://img.youtube.com/vi/IF1dd3KV84w/sddefault.jpg);"></div>
+                                    </a>
+                                </div>
+                                <div class="course_item__text">
+                                    <h6>
+                                        <a href="">Kiến thức cơ bản, cốt lõi dân IT cần học trước</a>
+                                    </h6>
+                                    <p>Kiến thức cơ bản dành cho dân IT, không phân biệt bạn theo Front-end, Back-end hay Devops</p>
+                                    <ul class="course_item_info">
+                                        <li class="course_item__author">
+                                            <a href="" class="course_item__author_link">
+                                                <img src="https://avatar-redirect.appspot.com/google/109023826614717592641?size=400" alt="Huy">
+                                                Huy
+                                            </a>
+                                        </li>
+                                        <li class="course_item__register">
+                                            <i class="fas fa-heart"></i>
+                                            1683
+                                        </li>
+                                        <li>
+                                            <a href="" class="course_item__joinBtn course_item__free">
+                                                Miễn phí
+                                            </a>    
+                                        </li>
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer"></footer>
+    <script>
+        fetch("./partial/header.html")
+        .then(response => {
+            return response.text()
+        })
+        .then(data => {
+            document.querySelector("header").innerHTML = data;
+        });
+
+        fetch("./partial/footer.html")
+        .then(response => {
+            return response.text()
+        })
+        .then(data => {
+            document.querySelector(".footer").innerHTML = data;
+        });
+    </script>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+        
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+          modalOpen();
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modalClose();
+          }
+        }
+
+        function modalOpen() {
+            modal.style.display = "block";
+            document.querySelector('body').classList.add('modal-open');
+        }
+
+        function modalClose() {
+            modal.style.display = "none";
+            document.querySelector('body').classList.remove('modal-open');
+            resetForm();
+        }
+        </script>
+    <script src="main.js"></script>
+</body>
+</html>

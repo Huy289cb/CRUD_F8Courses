@@ -1,0 +1,108 @@
+.add_courses_wraper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.add_courses {
+    margin: 0 auto;
+    padding: 32px 48px;
+    background-color: var(--gray-color);
+    border-radius: 5px;
+    max-width: 680px;
+    
+}
+
+.add_courses h2 {
+    margin-bottom: 24px;
+    color: rgba(255, 192, 203, 0.856);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.form_control {
+    display: flex;
+    padding: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form_control label {
+    color: rgba(255, 192, 203, 0.856);
+}
+
+.form_control input[type="text"], .form_control textarea {
+    min-width: 450px;
+    padding: 10px;
+    background: #272727;
+    color: rgba(255,255,255,.6);
+    border: none;
+    border-radius: 2px;
+    border-bottom: 1px rgba(255, 192, 203, 0.856) solid;
+    outline: none;
+}
+
+.form_control input[type="text"] {
+    height: 30px;
+}
+
+.form_control_btn {
+    justify-content: center;
+}
+
+.form_control_btn button {
+    margin: 12px;
+    padding: 8px 24px;
+    font-weight: 600;
+    border-radius: 2px;
+}
+
+.form_control_btn button:hover {
+    cursor: pointer;
+    background-color: var(--text-color);
+    color: rgba(255, 192, 203, 0.856);
+}
+
+.preview_title {
+    color: rgba(255, 192, 203, 0.856);
+    margin: 48px 0 24px;
+    position: relative;
+}
+
+.preview_title::before {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid rgba(255, 192, 203, 0.856);
+    top: 115%;
+    width: 90px;
+    left: 1px;
+}
+
+
+/* btn handle_course */
+
+.handle_course {
+    display: flex;
+    justify-content: center;
+    padding: 0 0 24px;
+}
+
+.handle_course button {
+    margin: 0 8px;
+}
+
+.btnUpdate {
+    background-color: brown;
+    color: white;
+}
+
+.btndelete {
+    background-color: black;
+    color: pink;
+}
+
+#myBtn {
+    margin-top: 32px;
+}
+
+
+
